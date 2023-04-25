@@ -1,0 +1,205 @@
+.container {
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    height: 100vh;
+    padding: 10px;
+}
+
+input {
+    width: 100%;
+    height: 6vh;
+    padding-left: 10px;
+    margin-top: 10px;
+    font-weight:bold;
+    color: #000;
+    background: #FFBB33;
+}
+
+.title {
+    font-size: 2.1rem;
+    font-weight: bold;
+    color: #FF8D33;
+}
+
+.content {
+    display: block;
+    padding: 3vh 3vh 3vh 3vh;
+    background-color: #fff;
+    /*border-radius: 20px;
+    box-shadow: 0px 5px 20px 0px rgb(0 0 0 / 16%), 0px 7px 20px 0 rgb(0 0 0 / 3%);*/
+    position: relative;
+}
+
+.showDetails {
+    display: none;
+    padding: 3vh 3vh 3vh 3vh;
+        width: 100%;
+        position: relative;
+}
+
+.details {
+    color: #5A5858;
+    margin-top: 2vh;
+    font-size: 1.2rem;
+}
+
+p {
+    margin: 0.5vh 0;
+}
+
+.label {
+    font-weight: 600;
+}
+
+.edit_btn {
+    margin-top: 15px;
+      appearance: button;
+      background-color: #1899D6;
+      border: solid transparent;
+      border-radius: 16px;
+      border-width: 0 0 4px;
+      box-sizing: border-box;
+      color: #FFFFFF;
+      cursor: pointer;
+      display: inline-block;
+      font-family: din-round,sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: .8px;
+      line-height: 20px;
+      outline: none;
+      overflow: visible;
+      padding: 13px 16px;
+      text-align: center;
+      text-transform: uppercase;
+      touch-action: manipulation;
+      transform: translateZ(0);
+      transition: filter .2s;
+      user-select: none;
+      -webkit-user-select: none;
+      vertical-align: middle;
+      white-space: nowrap;
+      width: 100%;
+}
+
+
+.edit_btn:after {
+  background-clip: padding-box;
+  background-color: #1CB0F6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+
+
+.add_btn {
+margin-top: 15px;
+      appearance: button;
+      background-color: #33FF52;
+      border: solid transparent;
+      border-radius: 16px;
+      border-width: 0 0 4px;
+      box-sizing: border-box;
+      color: #FFFFFF;
+      cursor: pointer;
+      display: inline-block;
+      font-family: din-round,sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: .8px;
+      line-height: 20px;
+      outline: none;
+      overflow: visible;
+      padding: 13px 16px;
+      text-align: center;
+      text-transform: uppercase;
+      touch-action: manipulation;
+      transform: translateZ(0);
+      transition: filter .2s;
+      user-select: none;
+      -webkit-user-select: none;
+      vertical-align: middle;
+      white-space: nowrap;
+      width: 100%;
+}
+
+
+.add_btn:after {
+  background-clip: padding-box;
+  background-color: #04C822;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.group_btn {
+    display: block;
+    position: center;
+    display: flex;
+    flex-direction: column;
+    bottom: -2.3vh;
+}
+
+
+.button-19 {
+  margin-top: 15px;
+  appearance: button;
+  background-color: #1899D6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: din-round,sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.button-19:after {
+  background-clip: padding-box;
+  background-color: #1CB0F6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}

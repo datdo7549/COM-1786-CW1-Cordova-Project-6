@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="css/details.css">
+    <title>Home</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="showDetails" id="showDetails">
+            <h4 class="title">Property detail</h4>
+            <div class="details">
+                <p><span class="label"><b>Name: </b></span><span id="name_trip"></span></p>
+                <p><span class="label"><b>Destination: </b></span><span id="destination"></span></p>
+                <p><span class="label"><b>Date: </b></span><span id="date"></span></p>
+                <p><span class="label"><b>Requires risk assessment: </b></span><span id="requires_risk"></span></p>
+                <p><span class="label"><b>Description : </b></span><span id="description"></span></p>
+            </div>
+        </div>
+    </div>
+    <script src=" cordova.js "></script>
+    <script src="js/index.js "></script>
+    <script>
+        var url = new URL(window.location.href);
+        var id = url.searchParams.get("id");
+        readPropertyDetailFromDatabase(id);
+    </script>
+</body>
+
+</html>

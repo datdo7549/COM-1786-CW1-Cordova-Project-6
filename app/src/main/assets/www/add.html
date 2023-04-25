@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="css/add.css">
+    <title>Home</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content" id="content">
+            <h4 class="title">Create trip</h4>
+            <form action="">
+                <input type="text" id="name_of_trip" placeholder="Name">
+                <input type="text" id="destination" placeholder="Destination">
+                <input type="text" onfocus="(this.type='date')" name="dateOfActivity" id="date" placeholder="Date">
+                <input type="text" id="requires_risk" placeholder="Requires risk assessment">
+                <input type="text" id="description" placeholder="Description">
+            </form>
+            <button class="button-19" id="btn_save">SAVE</button>
+        </div>
+
+        <div class="showDetails" id="showDetails">
+            <h4 class="title">Add trip</h4>
+            <div class="details">
+                <p><span class="label">Name: </span><span id="name_of_trip_confirm">Hang out</span></p>
+                <p><span class="label">Destination: </span><span id="destination_confirm"></span></p>
+                <p><span class="label">Date: </span><span id="date_confirm"></span></p>
+                <p><span class="label">Requires risk: </span><span id="requires_risk_confirm"></span></p>
+                <p><span class="label">Description: </span><span id="description_confirm"></span></p>
+
+            </div>
+            <div class="group_btn">
+                <button class="edit_btn" id="btn_edit_confirm">EDIT</button>
+                <button class="add_btn" id="btn_add_property_confirm">ADD </button>
+            </div>
+        </div>
+
+    </div>
+    <script src=" cordova.js "></script>
+    <script src="js/index.js "></script>
+    <script>
+		
+        document.getElementById("btn_save").addEventListener("click",function() {
+			var name = document.getElementById("name_of_trip").value;
+			var destination = document.getElementById("destination").value;
+            var date = document.getElementById("date").value;
+			var requires_risk = document.getElementById("requires_risk").value;
+            var description = document.getElementById("description").value;
+
+            if(name === '' || destination === '' || date === '' || requires_risk === '') {
+                warningEmptyFill();
+                return;
+            }
+
+            document.getElementById("content").style.display = "none";
+            document.getElementById("showDetails").style.display = "block";
+			
+            document.getElementById("name_of_trip_confirm").innerHTML = document.getElementById("name_of_trip").value;
+            document.getElementById("destination_confirm").innerHTML = document.getElementById("destination").value;
+            document.getElementById("date_confirm").innerHTML = document.getElementById("date").value;
+            document.getElementById("requires_risk_confirm").innerHTML = document.getElementById("requires_risk").value;
+            document.getElementById("description_confirm").innerHTML = document.getElementById("description").value;
+        });
+
+        document.getElementById("btn_edit_confirm").addEventListener("click",function() {
+            document.getElementById("content").style.display = "block";
+            document.getElementById("showDetails").style.display = "none";
+        });
+
+        document.getElementById("btn_add_property_confirm").addEventListener("click",function() {
+            var name = document.getElementById("name_of_trip_confirm").innerHTML;
+            var destination = document.getElementById("destination_confirm").innerHTML;
+            var date = document.getElementById("date_confirm").innerHTML;
+            var requires_risk = document.getElementById("requires_risk_confirm").innerHTML;
+            var description = document.getElementById("description_confirm").innerHTML;
+
+
+            addPropertyToDatabase(name, destination, date, requires_risk, description);
+        });
+    </script>
+</body>
+
+</html>

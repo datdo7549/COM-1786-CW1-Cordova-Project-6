@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="css/homepage.css">
+    <title>Home</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <section class="header">
+            <div class="title-wrapper">
+                <h1 class="sweet-title">
+                    <span data-text="Sweet">Trip</span>
+                    <span data-text="Stuff">List</span>
+                </h1>
+            </div>
+        </section>
+        <button class="button-19" onclick="window.location.href='add.html'">Add Expense</button>
+
+        <div class="list_rent" id="list_rent">
+
+        </div>
+
+    </div>
+
+    <script src="cordova.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+        readPropertyListFromStorage();
+    </script>
+</body>
+
+</html>
